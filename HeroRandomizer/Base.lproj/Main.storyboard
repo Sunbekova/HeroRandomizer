@@ -28,6 +28,8 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEx-Dd-QrD">
                                 <rect key="frame" x="155.33333333333334" y="704" width="82.666666666666657" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.1754913837" green="0.099469129389999994" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Roll">
                                     <fontDescription key="titleFontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="50"/>
@@ -38,37 +40,47 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="bqT-1R-cwB">
-                                <rect key="frame" x="20" y="399" width="353" height="298"/>
+                                <rect key="frame" x="20" y="399" width="353" height="180"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5J-FZ-EIO">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5J-FZ-EIO">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="0.0"/>
                                         <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <color key="highlightedColor" red="0.1754913837" green="0.099469129389999994" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="4" height="2"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05V-l0-mbK">
-                                        <rect key="frame" x="0.0" y="67" width="353" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05V-l0-mbK">
+                                        <rect key="frame" x="0.0" y="37" width="353" height="0.0"/>
                                         <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <color key="highlightedColor" red="0.1754913837" green="0.099469129389999994" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="4" height="2"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfg-Nf-2yp">
-                                        <rect key="frame" x="0.0" y="134" width="353" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Button to Start" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfg-Nf-2yp">
+                                        <rect key="frame" x="0.0" y="74" width="353" height="32"/>
                                         <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <color key="highlightedColor" red="0.1754913837" green="0.099469129389999994" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="4" height="2"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YC-nj-hhs">
-                                        <rect key="frame" x="0.0" y="201" width="353" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YC-nj-hhs">
+                                        <rect key="frame" x="0.0" y="143" width="353" height="0.0"/>
                                         <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <color key="highlightedColor" red="0.1754913837" green="0.099469129389999994" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="4" height="2"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkH-GZ-qTd">
-                                        <rect key="frame" x="0.0" y="268" width="353" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkH-GZ-qTd">
+                                        <rect key="frame" x="0.0" y="180" width="353" height="0.0"/>
                                         <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <color key="highlightedColor" red="0.1754913837" green="0.099469129389999994" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="4" height="2"/>
                                     </label>
                                 </subviews>
                             </stackView>
