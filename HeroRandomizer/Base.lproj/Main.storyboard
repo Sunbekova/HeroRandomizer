@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,9 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green-comic-background" translatesAutoresizingMaskIntoConstraints="NO" id="DhA-xA-kU6">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VFa-yQ-3zu">
                                 <rect key="frame" x="106.66666666666669" y="79" width="180" height="300"/>
                                 <constraints>
@@ -86,17 +82,13 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.27843138579999999" green="0.52941179279999995" blue="0.78039217000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="NEx-Dd-QrD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9kT-Kr-Lwc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NEx-Dd-QrD" secondAttribute="bottom" constant="50" id="DFC-sR-HOK"/>
                             <constraint firstItem="VFa-yQ-3zu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ELU-xp-nRa"/>
-                            <constraint firstItem="DhA-xA-kU6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GSS-l1-yNl"/>
-                            <constraint firstAttribute="bottom" secondItem="DhA-xA-kU6" secondAttribute="bottom" id="M9v-zE-TQX"/>
-                            <constraint firstItem="DhA-xA-kU6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U4z-nY-Wke"/>
                             <constraint firstItem="VFa-yQ-3zu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="aQW-oH-nSC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bqT-1R-cwB" secondAttribute="trailing" constant="20" id="nEo-o0-UJK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DhA-xA-kU6" secondAttribute="trailing" id="nYJ-62-SNk"/>
                             <constraint firstItem="bqT-1R-cwB" firstAttribute="top" secondItem="VFa-yQ-3zu" secondAttribute="bottom" constant="20" id="uA0-cM-UQB"/>
                             <constraint firstItem="bqT-1R-cwB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wng-2J-hFN"/>
                         </constraints>
@@ -115,10 +107,4 @@
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="green-comic-background" width="195" height="261"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
