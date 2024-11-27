@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Kingfisher
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -25,7 +27,8 @@ class ViewController: UIViewController {
     }
 
    
-    @IBAction func heroRolled(_ sender: UIButton) {let randomId = Int.random(in: 1...563)
+    @IBAction func heroRolled(_ sender: UIButton) {
+        let randomId = Int.random(in: 1...563)
         fetchHero(by: randomId)
         
         UIView.animate(withDuration: 0.2, animations: {
@@ -40,17 +43,14 @@ class ViewController: UIViewController {
 
     private func fetchHero(by id: Int) {
         let urlString = "https://akabab.github.io/superhero-api/api/id/\(id).json"
-        guard let url = URL(string: urlString) else { return }
-        let urlRequest = URLRequest(url: url)
-
-        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-            guard self.handleErrorIfNeeded(error: error) == false else {
-                return
+        AF.request(urlString).validate().responseDecodable(of: APIHero.self) { response in
+            switch response.result {
+            case .success(let heroForGetApiRequest):
+                self.handleHeroData(with: heroForGetApiRequest)
+            case .failure(Error):
+                print(Error.localizedDescription)
             }
-
-            guard let data else { return }
-            self.handleHeroData(data: data)
-        }.resume()
+        }
     }
     
     private func handleHeroData(data: Data) {
