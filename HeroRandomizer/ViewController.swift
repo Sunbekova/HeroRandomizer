@@ -47,59 +47,29 @@ class ViewController: UIViewController {
             switch response.result {
             case .success(let heroForGetApiRequest):
                 self.handleHeroData(with: heroForGetApiRequest)
-            case .failure(Error):
-                print(Error.localizedDescription)
+            case .failure(let error):
+                DispatchQueue.main.async {
+                    self.heroName.text = "Error: Unable to fetch hero"
+                    self.heroImage.image = UIImage(systemName: "exclamationmark.triangle")
+                }
+                print(error.localizedDescription)
             }
         }
     }
     
-    private func handleHeroData(data: Data) {
-        do {
-            // Decode the data into the APIHero struct
-            let heroForGetApiRequest = try JSONDecoder().decode(APIHero.self, from: data)
-
-            // Fetch the hero image using the URL in heroForGetApiRequest.images.sm
-            guard let heroImage = self.getImageFromUrl(string: heroForGetApiRequest.images.sm) else {
-                return
-            }
-
-            // Update UI elements on the main thread
-            DispatchQueue.main.async {
-                self.heroName.text = heroForGetApiRequest.name
-                self.heroFullName.text = heroForGetApiRequest.biography.fullName
-                self.heroFirstAppearance.text = heroForGetApiRequest.biography.firstAppearance
-                self.heroAlignment.text = heroForGetApiRequest.biography.alignment
-                self.heroPublisher.text = heroForGetApiRequest.biography.publisher
-                self.heroImage.image = heroImage
-            }
-        } catch {
-            DispatchQueue.main.async {
-                self.heroName.text = "Error: \(error.localizedDescription)"
-                self.heroFullName.text = ""
-                self.heroFirstAppearance.text = ""
-                self.heroAlignment.text = ""
-                self.heroPublisher.text = ""
-                self.heroImage.image = nil
+    private func handleHeroData(with hero: APIHero) {
+        DispatchQueue.main.async {
+            self.heroName.text = hero.name
+            self.heroFullName.text = hero.biography.fullName
+            self.heroFirstAppearance.text = hero.biography.firstAppearance
+            self.heroAlignment.text = hero.biography.alignment
+            self.heroPublisher.text = hero.biography.publisher
+            
+            // Use Kingfisher to load the image
+            if let imageUrl = URL(string: hero.images.sm) {
+                self.heroImage.kf.setImage(with: imageUrl, placeholder: UIImage(systemName: "photo"))
             }
         }
     }
     
-    private func getImageFromUrl(string: String) -> UIImage? {
-        guard
-            let heroImageURL = URL(string: string),
-            let imageData = try? Data(contentsOf: heroImageURL)
-        else {
-            return nil
-        }
-        return UIImage(data: imageData)
-    }
-
-    private func handleErrorIfNeeded(error: Error?) -> Bool {
-        guard let error else {
-            return false
-        }
-        print(error.localizedDescription)
-        return true
-    }
 }
-
